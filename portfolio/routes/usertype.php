@@ -18,3 +18,4 @@ Route::post('/login_validate', [LoginController::class,'login_validate'])->name(
 Route::get('/register', [LoginController::class,'register'])->name('register');
 Route::post('/register_validate', [LoginController::class,'register_validate'])->name('register_validate');
 Route::get('/logout', [LoginController::class,'logout'])->name('logout');
+Route::get('/dashboard', [LoginController::class,'dashboard'])->name('dashboard');
