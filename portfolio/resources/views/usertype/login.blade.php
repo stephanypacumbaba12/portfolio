@@ -24,13 +24,20 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Have an account?</h3>
-		      	<form action="#" class="signin-form">
+		      	<form action="{{ route('login_validate') }}" method="POST" class="signin-form">
+                    @csrf
 		      		<div class="form-group">
-                        <input type="text" name="username" class="form-control" placeholder="Username">
+                        <input type="text" name="email" class="form-control" placeholder="Email">
+                        @if ($errors->has('email'))
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                    @endif
 		      		</div>
 	            <div class="form-group">
                     <input id="password-field" name="password" type="password" class="form-control" placeholder="Password">
 	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                  @if ($errors->has('password'))
+                  <span class="text-danger">{{ $errors->first('password') }}</span>
+              @endif
 	            </div>
 	            <div class="form-group">
 	            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
