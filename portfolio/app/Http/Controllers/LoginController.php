@@ -71,4 +71,9 @@ class LoginController extends Controller
     {
         return view("usertype.dashboard");
     }
+
+    public function background()
+    {
+        return view("crud.background");
+    }
 }

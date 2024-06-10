@@ -21,7 +21,7 @@
 	        </button>
         </div>
 				<div class="p-4 pt-5">
-		  		<h1><a href="index.html" class="logo">Portfolio System</a></h1>
+		  		<h1><a href="/dashboard" class="logo">Portfolio System</a></h1>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
                 @if(Auth::check())
@@ -33,7 +33,7 @@
                 @endif
 	            <ul class="collapse list-unstyled" id="homeSubmenu">
                 <li>
-                    <a href="#">Show</a>
+                    <a href="/background">Show</a>
                 </li>
                 <li>
                     <a href="#">Add</a>
@@ -80,9 +80,9 @@
         <h2 class="mb-4">Hello Employer</h2>
         <p>Welcome</p>
         </div>
+        @endif
+        @endif
     </div>
-    @endif
-@endif
 
     <script src="{{asset('dash/js/jquery.min.js')}}"></script>
     <script src="{{asset('dash/js/popper.js')}}"></script>
